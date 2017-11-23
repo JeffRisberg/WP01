@@ -6,5 +6,4 @@
         </div><!-- #primary-sidebar -->
     <?php endif; ?>
 
-
 </div><!-- /.blog-sidebar -->

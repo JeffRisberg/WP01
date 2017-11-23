@@ -27,8 +27,9 @@ add_action('init', 'register_my_menu');
 
 function mytheme_customize_register($wp_customize)
 {
-    //All our sections, settings, and controls will be added here
-    // add the section to contain the settings
+    /**************************************
+     * Section:  Color Scheme
+     ***************************************/
     $wp_customize->add_section('textcolors', array(
         'title' => 'Color Scheme',
     ));
@@ -83,13 +84,12 @@ function mytheme_customize_register($wp_customize)
     }
 
     /**************************************
-    Solid background colors
+     * Section:  Solid background colors
      ***************************************/
     // add the section to contain the settings
     $wp_customize->add_section( 'background' , array(
         'title' =>  'Solid Backgrounds',
     ) );
-
 
     // add the setting for the header background
     $wp_customize->add_setting( 'header-background' );
@@ -141,8 +141,6 @@ function wptutsplus_customize_colors() {
     ?>
 
 <style>
-
-
     /* color scheme */
 
     /* main color */
@@ -204,7 +202,7 @@ add_action( 'wp_head', 'wptutsplus_customize_colors' );
 
 
 /*******************************************************************************
-add class to body if backgrounds turned on using the body_class filter
+ * Add class to body if backgrounds turned on using the body_class filter
  ********************************************************************************/
 function wptutsplus_add_background_color_style( $classes ) {
 
